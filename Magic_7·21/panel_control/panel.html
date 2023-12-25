@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="es" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bienvenido Admin</title>
+    <link rel="stylesheet" href="panel.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/db59255a97.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <img src="Logo.jpeg" alt="logo">
+            <h2>Administrador</h2>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <ul class="nav-list">
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-signs-post"></i>
+                    <span class="links_name">Panel de Control</span>
+                </a>
+                <span class="tooltip">Panel de Control</span>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="links_name" id="modulos">Modulos</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-cash-register"></i>
+                    <span class="links_name">Inventario</span>
+                </a>
+                <span class="tooltip">Inventario</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-users"></i>
+                    <span class="links_name">Empleados</span>
+                </a>
+                <span class="tooltip">Empleados</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-calendar"></i>
+                    <span class="links_name">Eventos</span>
+                </a>
+                <span class="tooltip">Eventos</span>
+            </li>
+
+            <li class="profile">
+                <div class="profile-details">
+                    <img src="Logo.png" alt="profileImg">
+                    <div class="name_job">
+                        <div class="name">Magic 7·21</div>
+                        <div class="job">Administrador</div>
+                    </div>
+                </div>
+                <i class='bx bx-log-out' id="log_out"></i>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+
+        <div class="header">
+            <div class="input-wrapper">
+                <button class="icon"> 
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="25px" width="25px">
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="#fff" d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z"></path>
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="#fff" d="M22 22L20 20"></path>
+                  </svg>
+                </button>
+                <input placeholder="search.." class="input" name="text" type="text">
+              </div>
+            <div class="date">
+                <span class="hora">08:30 pm</span><br>
+                <span>Sabado 16 de Diciembre</span>
+            </div>
+            <div class="perfil">
+                M
+            </div>
+        </div>
+
+        <div class="contenedor">
+            <p>¡Hola Administrador, te damos la bienvenida!</p>
+            <h1>
+                Magic
+                <span>7</span>·<span>21</span>
+            </h1>
+            <div class="opciones">
+                <div class="box">
+                    <i class="fa-solid fa-cash-register"></i>
+                    <span>Inventario</span>
+                </div>
+                <div class="box">
+                    <i class="fa-solid fa-users"></i>
+                    <span>Empleados</span>
+                </div>
+                <div class="box">
+                    <i class="fa-solid fa-calendar"></i>
+                    <span>Eventos</span>
+                </div>
+                <div class="box">
+                    <i class="fa-solid fa-registered"></i>
+                    <span>Registrar</span>
+                </div>
+            </div>
+            <div class="footer">
+                <span class="version">v1.0 Alpha</span><br>
+                <span class="derechos">Hecho con <i class="fa-solid fa-heart"></i> por Jhoann Zamudio | Todos los derechos reservados.</span>
+            </div>
+        </div>
+
+    </section>
+    <script>
+        let sidebar = document.querySelector(".sidebar");
+        let closeBtn = document.querySelector("#btn");
+        let searchBtn = document.querySelector(".bx-search");
+
+        closeBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("open");
+            menuBtnChange();//calling the function(optional)
+        });
+
+        searchBtn.addEventListener("click", () => { // Sidebar open when you click on the search iocn
+            sidebar.classList.toggle("open");
+            menuBtnChange(); //calling the function(optional)
+        });
+
+        // following are the code to change sidebar button(optional)
+        function menuBtnChange() {
+            if (sidebar.classList.contains("open")) {
+                closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+            } else {
+                closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");//replacing the iocns class
+            }
+        }
+    </script>
+</body>
+
+</html>

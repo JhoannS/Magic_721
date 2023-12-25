@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap');
+
+:root {
+    --lila: #BB9CC0;
+    --lila_select: #b166bd;
+    --lila_opacidad: #bb9cc02d;
+    --verde: #AAF27F;
+    --verde_opacidad: #2A4634;
+    --body: #161C24;
+    --body_box: #252C35;
+    --header_box: #333D48;
+    --lila: #BB9CC0;
+    --rojo: #fa484270;
+    --blanco_gris: #C4CDD5;
+    --blanco: #EFF0F1;
+    --box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    --letra: font-family: 'Baloo 2', sans-serif;
+}
+
+* {
+    font-family: 'Baloo 2', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: all .5s;
+}
+
+body {
+    background-color: var(--body);
+}
+
+.formulario {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    min-height: 84.5vh;
+}
+
+.formulario .box1 {
+    background-color: var(--body_box);
+    padding: 10px;
+    height: 100%;
+    width: 500px;
+    border-radius: 12px;
+}
+
+.box1 .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box1 .logo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.box1 .logo h1 {
+    color: var(--blanco_gris);
+    font-size: 50px;
+}
+
+.box1 .logo span {
+    color: var(--lila);
+}
+
+.box1 .parrafo {
+    color: var(--blanco);
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.box1 .bannerImg {
+    display: flex;
+    justify-content: center;
+}
+
+.box1 .bannerImg img {
+    width: 100%;
+    height: 400px;
+}
+
+.box1 .footer {
+    text-align: center;
+    color: var(--lila);
+    font-weight: bold;
+}
+
+.box1 .footer .derechos {
+    color: var(--blanco);
+}
+
+.formulario .box2 {
+    padding: 10px;
+    margin: 50px;
+    height: 100%;
+    width: 50%;
+    border-radius: 12px;
+}
+
+.box2 h1 {
+    color: var(--blanco);
+    text-align: center;
+}
+
+.box2 .parrafo {
+    color: var(--blanco_gris);
+    text-align: center;
+    font-weight: bold;
+}
+
+.box2 form {
+    margin: 65px;
+}
+
+.box2 form input {
+    font-size: 100%;
+    padding: 0.8em;
+    outline: none;
+    color: var(--blanco_gris);
+    border: 2px solid rgb(200, 200, 200);
+    background-color: transparent;
+    border-radius: 5px;
+    width: 92%;
+}
+
+
+.box2 form :is(input:focus, input:valid) {
+    border-color: var(--lila);
+}
+
+.box2 form p{
+    color: var(--lila);
+    text-align: right;
+    margin-top: 20px;
+    font-weight: bold;
+}
+.box2 form button{
+    margin-top: 20px;
+    background-color: var(--lila);
+    color: var(--body_box);
+    font-weight: bold;
+    border: none;
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+.box2 form button:hover{
+    background-color: var(--lila_select);
+    transition: all .5s;
+    color: var(--blanco_gris);
+    
+}

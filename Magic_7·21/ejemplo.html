@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo de Cambio de Color</title>
+  <style>
+    /* Estilos para los diferentes colores del texto */
+    .verde { color: green; }
+    .azul { color: blue; }
+    .rojo { color: red; }
+  </style>
+</head>
+<body>
+  <p>Hay <span id="cantidadProductos">0</span> productos disponibles.</p>
+
+  <script>
+    // JavaScript para cambiar dinámicamente el color del texto y mostrar la cantidad
+    const cantidadProductos = document.getElementById('cantidadProductos');
+
+    function cambiarColorTexto(cantidad) {
+      if (cantidad >= 30) {
+        cantidadProductos.textContent = cantidad;
+        cantidadProductos.className = 'verde';
+      } else if (cantidad <= 20) {
+        cantidadProductos.textContent = cantidad;
+        cantidadProductos.className = 'azul';
+      } else if (cantidad <= 10) {
+        cantidadProductos.textContent = cantidad;
+        cantidadProductos.className = 'rojo';
+      } else {
+        cantidadProductos.textContent = cantidad;
+        cantidadProductos.className = '';
+      }
+    }
+
+    // Puedes cambiar el número de productos aquí para probar diferentes colores
+    const cantidadActualProductos = 30;
+    cambiarColorTexto(cantidadActualProductos);
+  </script>
+</body>
+</html>
